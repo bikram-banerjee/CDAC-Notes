@@ -1,0 +1,97 @@
+What can Node.js do?
+--------------------
+- Node.js can generate dynamic page content.
+- Node.js can create, open, read, write, delete, and close files on the server.
+- Node.js can collect form data.
+- Node.js can add, delete, modify data in your database.
+    
+==**NOTE:**==
+node_module -> It stores all the third-party libraries and dependencies. It’s essential for managing dependencies, which are packages or modules that a NodeJS project relies on.
+
+|                              package.json                                            |                                         package-lock.json                                                       |
+| ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| It contains basic information about the project.                                     | It describes the exact tree that was generated to allow subsequent installs to have the identical tree.         |
+| It is mandatory for every project.                                                   | It is automatically generated for those operations where npm modifies either node_modules tree or package.json. |
+| It records important metadata about the project.                                     | It allows future devs to install the same dependencies in the project.                                          |
+| It contains information such as name, description, author, script, and dependencies. | It contains the name, dependencies, and locked version of the project.                                          |
+
+
+Why Node.js
+-----------
+- Traditional server-side languages like PHP or ASP follow a sequential process for handling file requests.
+- They send the request to the file system, wait for it to open and read the file, and then return the content to the client.
+- During this waiting period, the server can't handle other tasks.
+- Node.js, on the other hand, takes an asynchronous approach.
+- It also sends the file request to the file system but doesn't wait for it to complete.
+- Instead, Node.js continues with other tasks, making it highly efficient.
+- When the file system finishes reading the file, Node.js retrieves the content and returns it to the client.
+- This asynchronous, non-blocking behavior allows Node.js to handle multiple requests simultaneously and efficiently utilize system resources.
+
+
+CommonJS vs ES Modules
+-----------------------
+Note -> The primary difference between CommonJS and ES Modules is the module loading system. 
+CommonJS uses synchronous loading, while ES Modules uses asynchronous loading. Additionally, CommonJS uses the require function to import modules, while ES Modules uses the import statement.
+
+
+1. CommonJS
+-----------
+> CommonJS was developed in 2009 by Kevin Dangoor and other developers.
+  It was created to solve the problem of managing dependencies in JavaScript projects. Before CommonJS, JavaScript code was typically written in a single file, making it difficult to manage dependencies.
+
+> CommonJS is a highly functional and effective module system that is used for server-side development in Node.js.
+ It was specifically designed to solve the complex problem of organizing code in large and intricate projects.
+
+> CommonJS operates on a set of principles that enable developers to write code that can be reused and easily managed.
+  It also provides an excellent mechanism to manage dependencies for code, even in the most challenging situations.
+
+> It is a reliable and powerful tool that can greatly enhance the development process, especially in the case of large-scale projects.
+
+> It is a synchronous module system. This means that when a module is imported, the code execution is blocked until the module is loaded. 
+  The module system uses the require function to import modules and the module.exports object to export modules.
+
+Pros
+> CommonJS is easy to learn and use.
+
+> It is widely supported and used in Node.js.
+
+> Synchronous module loading ensures that all dependencies are loaded before the module is executed.
+
+Cons
+> Synchronous module loading can lead to performance issues in large apps.
+
+> The lack of tree-shaking can lead to larger bundle sizes.
+
+> It is not suitable for client-side development in the browser.
+
+
+2. ES Modules
+-------------
+> ES Modules was introduced in ECMAScript 6 in 2015.
+
+> It was created to provide a standardized way to modularize JavaScript code. ES Modules is now widely supported by modern web browsers and Node.js.
+
+> ES Modules represents a more modern approach to JavaScript module management, using an asynchronous model for loading modules.
+
+Pros
+> ES Modules is a standardized module system built into the JavaScript language.
+
+> Asynchronous module loading can improve performance in large apps.
+
+> The tree-shaking feature can reduce bundle sizes.
+
+Cons
+> ES Modules is relatively new and not fully supported by older web browsers.
+
+> The syntax for importing and exporting modules can be complex.
+
+
+
+Url
+---
+
+
+
+
+
+
